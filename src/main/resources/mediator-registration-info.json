@@ -1,0 +1,33 @@
+{
+  "urn": "urn:uuid:9e7a6d00-72a2-11e5-831f-2d57bec32a8f",
+  "version": "0.1.0",
+  "name": "Facility Mediator",
+  "description": "Handles the mediator calls for Facility Resources",
+  "endpoints": [
+    {
+      "name": "Facility Mediator Route",
+      "host": "localhost",
+      "port": "4000",
+      "path": "/facility",
+      "type": "http"
+    }
+  ],
+  "defaultChannelConfig": [
+    {
+      "name": "Facility Mediator",
+      "urlPattern": "^/facility$",
+      "type": "http",
+      "allow": ["facilitymediator"],
+      "routes": [
+        {
+          "name": "Facility Mediator Route",
+          "host": "localhost",
+          "port": "4000",
+          "path": "/facility",
+          "type": "http",
+          "primary": "true"
+        }
+      ]
+    }
+  ]
+}
