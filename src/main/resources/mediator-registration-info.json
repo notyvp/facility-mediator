@@ -8,14 +8,13 @@
       "name": "Facility Mediator Route",
       "host": "localhost",
       "port": "4000",
-      "path": "/facility",
       "type": "http"
     }
   ],
   "defaultChannelConfig": [
     {
       "name": "Facility Mediator",
-      "urlPattern": "^/facility$",
+      "urlPattern": "/facility/.*",
       "type": "http",
       "allow": ["facilitymediator"],
       "routes": [
@@ -23,7 +22,6 @@
           "name": "Facility Mediator Route",
           "host": "localhost",
           "port": "4000",
-          "path": "/facility",
           "type": "http",
           "primary": "true"
         }

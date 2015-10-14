@@ -18,8 +18,8 @@ public class MediatorMain {
 
         //TODO Configure routes here
         //...
-        routingTable.addRoute("/facility", DefaultOrchestrator.class);
-
+        routingTable.addRoute("/facility/.*", DefaultOrchestrator.class);
+	routingTable.addRoute("/facility-api/.*", FacilityApi.class);
         return routingTable;
     }
 
