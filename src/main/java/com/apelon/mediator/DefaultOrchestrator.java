@@ -60,24 +60,26 @@ public class DefaultOrchestrator extends UntypedActor {
 	@Override
 	public void onReceive(Object msg) throws Exception {
 		log.info("Accessing Default Orchestrator");
-		
-		if (msg instanceof MediatorHTTPRequest) {
-			queryFacility((MediatorHTTPRequest) msg);
-		} else if (msg instanceof MediatorHTTPResponse) {
-			processFacilityResponse((MediatorHTTPResponse) msg);
-		} else {
-			unhandled(msg);
-		}
-		
-		//YEOMAN GENERATED METHOD
+//
+//		System.out.println("Here");	
+//	
 //		if (msg instanceof MediatorHTTPRequest) {
-//			FinishRequest finishRequest = new FinishRequest(
-//					"A message from my new mediator!", "text/plain",
-//					HttpStatus.SC_OK);
-//			((MediatorHTTPRequest) msg).getRequestHandler().tell(finishRequest,
-//					getSelf());
+//			queryFacility((MediatorHTTPRequest) msg);
+//		} else if (msg instanceof MediatorHTTPResponse) {
+//			processFacilityResponse((MediatorHTTPResponse) msg);
 //		} else {
 //			unhandled(msg);
 //		}
+		
+		//YEOMAN GENERATED METHOD
+		if (msg instanceof MediatorHTTPRequest) {
+			FinishRequest finishRequest = new FinishRequest(
+					"A message from my new mediator!", "text/plain",
+					HttpStatus.SC_OK);
+			((MediatorHTTPRequest) msg).getRequestHandler().tell(finishRequest,
+					getSelf());
+		} else {
+			unhandled(msg);
+		}
 	}
 }

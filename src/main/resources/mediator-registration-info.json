@@ -6,7 +6,7 @@
   "endpoints": [
     {
       "name": "Facility Mediator Route",
-      "host": "localhost",
+      "host": "hardevhim.ct.apelon.com",
       "port": "4000",
       "type": "http"
     }
@@ -20,7 +20,7 @@
       "routes": [
         {
           "name": "Facility Mediator Route",
-          "host": "localhost",
+          "host": "hardevhim.ct.apelon.com",
           "port": "4000",
           "type": "http",
           "primary": "true"
