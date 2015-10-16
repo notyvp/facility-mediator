@@ -59,15 +59,15 @@ public class DefaultOrchestrator extends UntypedActor {
 	
 	@Override
 	public void onReceive(Object msg) throws Exception {
-		log.info("Receiving");
+		log.info("Accessing Default Orchestrator");
 		
-//		if (msg instanceof MediatorHTTPRequest) {
-//			queryFacility((MediatorHTTPRequest) msg);
-//		} else if (msg instanceof MediatorHTTPResponse) {
-//			processFacilityResponse((MediatorHTTPResponse) msg);
-//		} else {
-//			unhandled(msg);
-//		}
+		if (msg instanceof MediatorHTTPRequest) {
+			queryFacility((MediatorHTTPRequest) msg);
+		} else if (msg instanceof MediatorHTTPResponse) {
+			processFacilityResponse((MediatorHTTPResponse) msg);
+		} else {
+			unhandled(msg);
+		}
 		
 		//YEOMAN GENERATED METHOD
 //		if (msg instanceof MediatorHTTPRequest) {
